@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --cyellow: #ffd082;
+  --cblue: #21243d;
+  --cpeach: #ff7c7c;
+}
+body {
+  background-color: var(--cyellow);
+  color: var(--cblue);
+}
+
+@font-face {
+  font-family: Biennale;
+  src: url(fonts/Biennale-Light.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: Biennale;
+  src: url(fonts/Biennale-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Biennale;
+  src: url(fonts/Biennale-Bold.ttf);
+  font-style: normal;
+  font-weight: bold;
+}
