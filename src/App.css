@@ -92,6 +92,8 @@ button.app-to-do-button-add {
 }
 .app-to-do-item-list {
   padding-left: 0px;
+  max-height: 40vh;
+  overflow: auto;
   box-shadow: 0 13.1px 19.2px rgba(0, 0, 0, 0.021),
     0 23.2px 26.5px rgba(0, 0, 0, 0.03), 0 31.9px 32.6px rgba(0, 0, 0, 0.037),
     0 41.4px 39.8px rgba(0, 0, 0, 0.044), 0 56.4px 50.6px rgba(0, 0, 0, 0.053),
@@ -106,4 +108,11 @@ button.app-to-do-button-add {
   text-align: center;
   position: absolute;
   bottom: 0px;
+}
+.app-to-do-link {
+  color: var(--cblue);
+  text-decoration: none;
+}
+.app-to-do-link:hover {
+  color: var(--cpeach);
 }

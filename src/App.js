@@ -136,7 +136,16 @@ class App extends React.Component {
         </div>
         <div className="app-to-do-footer">
           <p>
-            Designed and Developed by <b>@shridharulli</b>
+            Designed and Developed by{" "}
+            <b>
+              <a
+                className="app-to-do-link"
+                href="https://shridharulli.github.io"
+                target="_blank"
+              >
+                @shridharulli
+              </a>
+            </b>
           </p>
         </div>
       </div>
