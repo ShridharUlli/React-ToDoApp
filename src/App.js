@@ -1,6 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import TodoItem from "./components/TodoItem";
 
 import "./App.css";
 
@@ -12,7 +11,12 @@ class App extends React.Component {
       list: [],
       doneTasks: 0
     };
+    this.addItem = this.addItem.bind(this);
+    this.doneTask = this.doneTask.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
+    this.updateInput = this.updateInput.bind(this);
   }
+
 
   addItem(todovalue) {
     if (todovalue !== "") {
@@ -72,6 +76,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <h1 className="app-to-do-title">To-Do List App</h1>
+        
         <div className="app-to-do">
           <div className="app-to-do-container">
             <div className="app-to-do-input-container">
@@ -99,25 +104,16 @@ class App extends React.Component {
                     textDecoration: item.strike
                   };
                   return (
-                    <li className="app-to-do-item" key={item.id}>
-                      <input
-                        type="checkbox"
-                        name=""
-                        id=""
-                        className="app-to-do-checkbox"
-                        checked={item.isDone}
-                        onChange={() => this.doneTask(item)}
-                      />
-
-                      <span style={strike}> {item.value}</span>
-
-                      <button
-                        className="app-to-do-button-delete"
-                        onClick={() => this.deleteItem(item.id)}
-                      >
-                        <FontAwesomeIcon icon={faTrash} />
-                      </button>
-                    </li>
+                    <TodoItem
+                    item={item}
+                    id={item.id}
+                    isDone={item.isDone}
+                    value={item.value}
+                    strike={strike}
+                    doneTask={this.doneTask}
+                    deleteItem={this.deleteItem}
+                    >
+                    </TodoItem>
                   );
                 })}
               </ul>
