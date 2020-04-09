@@ -126,7 +126,7 @@ class App extends React.Component {
             </p>
             <p className="app-to-do-details">
               {" "}
-              Tasks Completed : <b>{this.state.doneTasks}</b>{" "}
+              Tasks Completed so far : <b>{this.state.doneTasks}</b>{" "}
             </p>
           </div>
         </div>
